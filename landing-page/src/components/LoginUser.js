@@ -26,6 +26,7 @@ function LoginUser() {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        className='popup'
       >
         <Modal.Header closeButton>
           <Modal.Title>XYZ Booking</Modal.Title>
@@ -33,13 +34,22 @@ function LoginUser() {
         <Modal.Body>
             <h3 className='login-heading'>Sign in</h3>
             <form className='login-form'>
-                <input type='email' name="email" placeholder='Email id.'/>
-                <input type='password' name="confirmPassword" placeholder='Password' />
-                <label htmlFor="terms"><input required id="terms" type="checkbox"/><span>I accept the terms & conditions</span></label>
+                <label className='login-fields'>
+                  <span>Email id.</span>
+                  <input type='email' name="email" />
+                </label>
+                <label className='login-fields'>
+                  <span>Password</span>
+                  <input type='password' name="confirmPassword" />
+                </label>
+                <label className="terms" htmlFor="terms">
+                  <input required id="terms" type="checkbox"/>
+                  <span>I accept the terms & conditions</span>
+                </label>
             </form>
             <a className="forgot-password" href="">Forgot password?</a>
             <hr />
-            <p>New to XYZ Booking?<a href="./RegisterUser.js">Create account</a></p>
+            <p>New to XYZ Booking? <a href="./RegisterUser.js">Create account</a></p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

@@ -62,11 +62,13 @@ main > div > button:hover {
 
 .main-dark {
   background: url("../public/images/endless-constellation-dark.svg");
+  /* background by SVGBackgrounds.com */
   color: white;
 }
 
 .main-light {
   background: url("../public/images/endless-constellation-light.svg");
+  /* background by SVGBackgrounds.com */
 }
 
 #navbar-dark {
@@ -77,6 +79,18 @@ main > div > button:hover {
 #navbar-light {
   background-color: white !important;
   color: black!important;
+}
+
+.popup {
+  backdrop-filter: blur(17px) saturate(200%);
+  -webkit-backdrop-filter: blur(17px) saturate(200%);
+  background-color: rgba(190, 190, 190, 0.44);
+}
+
+.inner-popup {
+  backdrop-filter: blur(17px) saturate(200%);
+  -webkit-backdrop-filter: blur(17px) saturate(200%);
+  background-color: rgba(190, 190, 190, 0.44);
 }
 
 #toggle-button {
@@ -169,6 +183,14 @@ main > div > button:hover {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 30px;
+
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .login-heading {
@@ -180,12 +202,19 @@ main > div > button:hover {
   display: block;
 }
 
-.login-form > input {
+.login-fields input {
   width: 300px;
   height: 35px;
   text-indent: 3px;
-  border-radius: 3px;
-  border: 2px solid grey;
+  border-radius: 8px;
+  border: 2px solid rgb(161, 161, 161);
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 footer {
