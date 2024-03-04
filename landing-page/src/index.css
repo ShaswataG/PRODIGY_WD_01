@@ -11,6 +11,11 @@ body {
   flex-direction: column;
 }
 
+.app > div {
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   /* position: static; */
   /* top: 10000px; */
@@ -18,7 +23,7 @@ main {
   margin: 0;
   padding-top: 130px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 main > div {
@@ -65,13 +70,13 @@ main > div > button:hover {
 }
 
 #navbar-dark {
-  background-color: black;
-  color: white;
+  background-color: black!important;
+  color: white!important;
 }
 
 #navbar-light {
   background-color: white !important;
-  color: black;
+  color: black!important;
 }
 
 #toggle-button {
@@ -91,18 +96,18 @@ main > div > button:hover {
   padding: 10px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 30px;
-  padding-right: 40px;
-  width: 100%;
-  height: 60px;
+.navBar {
+  display: flex!important;
+  align-items: center!important;
+  z-index: 1!important;
+  justify-content: space-around!important;
+  position: fixed!important;
+  top: 0!important;
+  left: 0!important;
+  padding: 50px!important;
+  padding-right: 40px!important;
+  width: 100%!important;
+  height: 60px!important;
 }
 
 .nav-items {
@@ -117,14 +122,22 @@ main > div > button:hover {
 .navbar-main {
   background-color: inherit;
   color: inherit;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
 }
 
-.navbar > button {
+.navbar-main {
+  list-style: none;
+  max-height: 100%;
+}
+
+.navBar > button {
   background-color: inherit;
   color: inherit;
 }
 
-.navbar > div:last-of-type {
+.navBar > div:last-of-type {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,12 +148,7 @@ main > div > button:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.navbar-main {
-  display: flex;
-  flex-direction: row;
-  gap: 3em;
+  cursor: pointer;
 }
 
 .nav-items {
@@ -153,12 +161,38 @@ main > div > button:hover {
 .login {
   border: none;
   padding: 0;
+  cursor: pointer;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-heading {
+  text-align: center;
+}
+
+.forgot-password {
+  text-align: center;
+  display: block;
+}
+
+.login-form > input {
+  width: 300px;
+  height: 35px;
+  text-indent: 3px;
+  border-radius: 3px;
+  border: 2px solid grey;
 }
 
 footer {
   width: 100%;
   height: 300px;
   padding-top: 80px;
+  position: sticky;
 }
 
 .footer-dark {
@@ -178,4 +212,10 @@ footer {
   gap: 8px;
   position: relative;
   bottom: 5px;
+}
+
+@media (max-width: 927.2px) {
+  .navbar-main {
+    gap: 1em;
+  }
 }

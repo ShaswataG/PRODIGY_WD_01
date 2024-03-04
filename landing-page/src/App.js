@@ -14,8 +14,10 @@ export default function App() {
   return (
     <div className="app">
       <Navbar mode={darkMode} toggleTheme={toggleMode} />
-      <Main mode={darkMode}/>
-      <Footer mode={darkMode}/>
+      <div>
+        <Main mode={darkMode}/>
+        <Footer mode={darkMode}/>
+      </div>
     </div>
   )
 }
