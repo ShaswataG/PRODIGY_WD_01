@@ -29,14 +29,16 @@ main {
 main > div {
   text-align: center;
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-main > div > button {
+main > div > section > button {
   width: 300px;
   height: 55px;
   font-size: 25px;
   font-weight: 500;
-  background-color: aqua;
   border-radius: 10px;
   border: none;
   padding: 10px;
@@ -44,13 +46,17 @@ main > div > button {
 
 .main--button-light {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: #00b0b5;
+  color: white;
 }
 
 .main--button-dark {
   box-shadow: rgb(157, 165, 173) 0px 20px 30px -10px;
+  background-image: linear-gradient(165deg, black, grey);
+  color: white;
 }
 
-main > div > button:hover {
+main > div > section > button:hover {
   width: 305px;
   height: 60px;
   font-size: 25px;
@@ -64,30 +70,43 @@ main > div > button:hover {
   background: url("../public/images/endless-constellation-dark.svg");
   /* background by SVGBackgrounds.com */
   color: white;
+  background-attachment: fixed;
 }
 
 .main-light {
   background: url("../public/images/endless-constellation-light.svg");
   /* background by SVGBackgrounds.com */
+  color: black;
+  background-attachment: fixed;
+}
+
+#about-us {
+  min-height: 100vh;
+  padding: 0 10vw;
+  overflow:visible
+}
+
+#about-us > p {
+  font-size: 25px;
+  margin: 40px 0;
+}
+
+.card-dark {
+  background-color: rgb(72, 70, 70)!important;
+  color: white!important;
 }
 
 #navbar-dark {
-  background-color: black!important;
+  background-image: linear-gradient(145deg, black, grey)!important;
   color: white!important;
 }
 
 #navbar-light {
-  background-color: white !important;
-  color: black!important;
+  background-color: #00b0b5!important;
+  color: white!important;
 }
 
 .popup {
-  backdrop-filter: blur(17px) saturate(200%);
-  -webkit-backdrop-filter: blur(17px) saturate(200%);
-  background-color: rgba(190, 190, 190, 0.44);
-}
-
-.inner-popup {
   backdrop-filter: blur(17px) saturate(200%);
   -webkit-backdrop-filter: blur(17px) saturate(200%);
   background-color: rgba(190, 190, 190, 0.44);
@@ -114,7 +133,7 @@ main > div > button:hover {
   display: flex!important;
   align-items: center!important;
   z-index: 1!important;
-  justify-content: space-around!important;
+  justify-content: space-between!important;
   position: fixed!important;
   top: 0!important;
   left: 0!important;
@@ -126,11 +145,12 @@ main > div > button:hover {
 
 .nav-items {
   text-decoration: none;
+  height: 100%;
 }
 
 .nav-items:hover {
-  text-decoration: underline;
-  font-weight: 500;
+  /* text-decoration: underline; */
+  border-bottom: 4px solid white;
 }
 
 .navbar-main {
@@ -139,11 +159,10 @@ main > div > button:hover {
   display: flex;
   flex-direction: row;
   gap: 3em;
-}
-
-.navbar-main {
+  height: 100%;
   list-style: none;
-  max-height: 100%;
+  margin: 0px;
+  height: 100%;
 }
 
 .navBar > button {
@@ -197,6 +216,10 @@ main > div > button:hover {
   text-align: center;
 }
 
+.login-button {
+  width: 300px;
+}
+
 .forgot-password {
   text-align: center;
   display: block;
@@ -210,6 +233,14 @@ main > div > button:hover {
   border: 2px solid rgb(161, 161, 161);
 }
 
+.login-fields > span {
+  text-indent: 5px;
+}
+
+.login-fields input:focus {
+  border: 1.4px solid #0d6efd;
+}
+
 .terms {
   display: flex;
   align-items: center;
@@ -217,21 +248,41 @@ main > div > button:hover {
   margin-top: 10px;
 }
 
+.card-collection {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  /* grid-auto-flow: row; */
+}
+
+.model-footer {
+  display: flex;
+  justify-content: space-around!important;
+  padding: 30px 0 !important;
+}
+
 footer {
   width: 100%;
-  height: 300px;
+  height: 200px;
   padding-top: 80px;
   position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
 }
 
 .footer-dark {
   background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(25,20,65,1) 0%, rgba(18,72,116,1) 42%, rgba(0,212,255,1) 100%);  
+  /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(25,20,65,1) 0%, rgba(18,72,116,1) 42%, rgba(0,212,255,1) 100%);   */
+  background-image: linear-gradient(145deg, black, grey)!important;
 }
 
 .footer-light {
-  background: rgb(201,163,41);
-  background: linear-gradient(0deg, rgba(201,163,41,1) 0%, rgba(201,142,41,1) 0%, rgba(201,142,41,1) 35%, rgba(255,255,255,1) 100%); 
+  background: linear-gradient(0deg,#00b0b5, #00b0b5 0%, #00b0b5 35%, #00b0b5 100%); 
+  background-color: #00b0b5;
 }
 
 #contact ul {
@@ -239,6 +290,7 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  padding: 0px;
   position: relative;
   bottom: 5px;
 }

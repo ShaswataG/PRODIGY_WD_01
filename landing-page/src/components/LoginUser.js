@@ -35,27 +35,23 @@ function LoginUser() {
             <h3 className='login-heading'>Sign in</h3>
             <form className='login-form'>
                 <label className='login-fields'>
-                  <span>Email id.</span>
+                  <span>Email</span>
                   <input type='email' name="email" />
                 </label>
                 <label className='login-fields'>
                   <span>Password</span>
                   <input type='password' name="confirmPassword" />
                 </label>
-                <label className="terms" htmlFor="terms">
+                {/* <label className="terms" htmlFor="terms">
                   <input required id="terms" type="checkbox"/>
                   <span>I accept the terms & conditions</span>
-                </label>
+                </label> */}
+                <Button className="login-button" type="submit" variant="primary">Sign In</Button>
             </form>
             <a className="forgot-password" href="">Forgot password?</a>
-            <hr />
-            <p>New to XYZ Booking? <a href="./RegisterUser.js">Create account</a></p>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Back
-          </Button>
-          <Button type="submit" variant="primary">Sign In</Button>
+        <Modal.Footer className='model-footer'>
+        <p>New to XYZ Booking? <a href="./RegisterUser.js">Create account</a></p>
         </Modal.Footer>
       </Modal>
     </div>

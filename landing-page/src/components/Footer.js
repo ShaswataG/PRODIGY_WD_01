@@ -10,6 +10,7 @@ export default function Footer(props) {
                 <li><img src="./images/twitter-x.svg"/></li>
                 <li><img src="./images/threads.svg"/></li>
             </ul>
+            <p>&copy; Shaswata</p>
         </footer>
     )
 }
