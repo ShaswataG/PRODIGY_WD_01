@@ -67,14 +67,14 @@ main > div > section > button:hover {
 }
 
 .main-dark {
-  background: url("../public/images/endless-constellation-dark.svg");
+  background: url("../../public/images/endless-constellation-dark.svg");
   /* background by SVGBackgrounds.com */
   color: white;
   background-attachment: fixed;
 }
 
 .main-light {
-  background: url("../public/images/endless-constellation-light.svg");
+  background: url("../../public/images/endless-constellation-light.svg");
   /* background by SVGBackgrounds.com */
   color: black;
   background-attachment: fixed;
@@ -91,9 +91,24 @@ main > div > section > button:hover {
   margin: 40px 0;
 }
 
+.card-light {
+  background-color: #00b0b5!important;
+  color: white!important;
+}
+
 .card-dark {
   background-color: rgb(72, 70, 70)!important;
   color: white!important;
+}
+
+.card-button-light {
+  background-color: #F7B733!important;
+  border: none!important;
+}
+
+.card-button-dark {
+  background-color: #6528e0!important;
+  border: none!important;
 }
 
 #navbar-dark {
@@ -117,15 +132,27 @@ main > div > section > button:hover {
   border: none;
 }
 
-.login {
+.login-button-light {
   right: 30px;
   width: 90px;
   text-align: center;
   height: 40px;
-  font-size: 25px;
-  background-color: aqua;
+  font-weight: 600!important;
+  background-color: #F7B733!important;
   border-radius: 10px;
-  border: none;
+  border: none!important;
+  padding: 10px;
+}
+
+.login-button-dark {
+  right: 30px;
+  width: 90px;
+  text-align: center;
+  height: 40px;
+  font-weight: 600!important;
+  background-color: #6528e0!important;
+  border-radius: 10px;
+  border: none!important;
   padding: 10px;
 }
 
@@ -281,7 +308,7 @@ footer {
 }
 
 .footer-light {
-  background: linear-gradient(0deg,#00b0b5, #00b0b5 0%, #00b0b5 35%, #00b0b5 100%); 
+  /* background: linear-gradient(0deg,#00b0b5, #00b0b5 0%, #00b0b5 35%, #00b0b5 100%);  */
   background-color: #00b0b5;
 }
 

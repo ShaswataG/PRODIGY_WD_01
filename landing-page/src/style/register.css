@@ -1,0 +1,49 @@
+.register-form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid  black;
+    border-radius: 15px;
+}
+
+.register-form > h3 {
+    text-align: center;
+}
+
+.register-form label {
+    font-size: 21px;
+    max-width: 600px;
+    min-width: 450px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label span {
+    text-indent: 3px;
+}
+
+.register-form > label > input {
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+.register-form > label > input:focus {
+    border: 2px solid blue;
+}
+
+.register-form button {
+    width: 250px;
+    height: 50px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.terms {
+    display: flex;
+    flex-direction: row!important;
+}

@@ -20,7 +20,7 @@ export default function Navbar(props) {
             </div>
             <div>
                 <button className="toggleMode" onClick={props.toggleTheme}><img id="toggle-button" src={`../images/mode-${props.mode ? "light" : "dark"}.svg`} /></button>
-                <LoginUser />
+                <LoginUser darkMode={props.mode} />
             </div>
         </nav>
     )

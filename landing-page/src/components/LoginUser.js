@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import RegisterUser from './RegisterUser'
+import { Link } from 'react-router-dom';
 
-function LoginUser() {
+function LoginUser(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -19,7 +19,7 @@ function LoginUser() {
 
   return (
     <div>
-      <Button onClick={handleShow} className="login">Login</Button>
+      <Button onClick={handleShow} className={props.darkMode ? "login-button-dark" : "login-button-light"} >Login</Button>
 
       <Modal
         show={show}
@@ -51,7 +51,7 @@ function LoginUser() {
             <a className="forgot-password" href="">Forgot password?</a>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-        <p>New to XYZ Booking? <a href="./RegisterUser.js">Create account</a></p>
+        <p>New to XYZ Booking? <a href="register">Create account</a></p>
         </Modal.Footer>
       </Modal>
     </div>

@@ -1,7 +1,8 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Landing from "./pages/Landing";
+import Register from './pages/Register';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
   
@@ -12,12 +13,13 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <Navbar mode={darkMode} toggleTheme={toggleMode} />
-      <div>
-        <Main mode={darkMode}/>
-        <Footer mode={darkMode}/>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+            <Landing darkMode={darkMode} toggleMode={toggleMode} />
+        }/>
+        <Route path="register" element={<Register />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
