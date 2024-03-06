@@ -12,10 +12,10 @@ export default function Navbar(props) {
             </div>
             <div>
                 <ul className="navbar-main">
-                    <li><a href="#main" className="nav-items">Home</a></li>
-                    <li><a href="#about-us" className="nav-items">About us</a></li>
-                    <li><a href="#popular-packages" className="nav-items">Popular Packages</a></li>
-                    <li><a href="#contact" className="nav-items">Contact us</a></li>
+                    <li><a href="#main" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Home</a></li>
+                    <li><a href="#about-us" className={props.mode ? "nav-items-dark" : "nav-items-light"}>About us</a></li>
+                    <li><a href="#popular-packages" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Popular Packages</a></li>
+                    <li><a href="#contact" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Contact us</a></li>
                 </ul>
             </div>
             <div>

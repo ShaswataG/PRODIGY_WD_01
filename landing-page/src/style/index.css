@@ -120,7 +120,7 @@ main > div > section > button:hover {
 
 #navbar-light {
   background-color: #DAC0A3!important;
-  color: white!important;
+  color: black!important;
 }
 
 .popup {
@@ -130,7 +130,7 @@ main > div > section > button:hover {
 }
 
 #toggle-button {
-  width: 20 px;
+  width: 20px;
   border: none;
 }
 
@@ -182,14 +182,23 @@ main > div > section > button:hover {
   height: 60px!important;
 }
 
-.nav-items {
+.navbar-main > li > a {
   text-decoration: none;
   height: 100%;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font-size: 1.5em;
 }
 
-.nav-items:hover {
+.nav-items-dark:hover {
   /* text-decoration: underline; */
   border-bottom: 4px solid white;
+}
+
+.nav-items-light:hover {
+  /* text-decoration: underline; */
+  border-bottom: 4px solid black;
 }
 
 .navbar-main {
@@ -221,13 +230,6 @@ main > div > section > button:hover {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-}
-
-.nav-items {
-  border: none;
-  background-color: inherit;
-  color: inherit;
-  font-size: 1.5em;
 }
 
 .login {
@@ -329,11 +331,13 @@ footer {
   background: rgb(2,0,36);
   /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(25,20,65,1) 0%, rgba(18,72,116,1) 42%, rgba(0,212,255,1) 100%);   */
   background-image: linear-gradient(145deg, black, grey)!important;
+  color: white;
 }
 
 .footer-light {
   /* background: linear-gradient(0deg,#00b0b5, #00b0b5 0%, #00b0b5 35%, #00b0b5 100%);  */
   background-color: #DAC0A3;
+  color: black;
 }
 
 #contact ul {
