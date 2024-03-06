@@ -35,12 +35,12 @@ function LoginUser(props) {
             <h3 className='login-heading'>Sign in</h3>
             <form className='login-form'>
                 <label className='login-fields'>
-                  <span>Email</span>
-                  <input type='email' name="email" />
+                  {/* <span>Email</span> */}
+                  <input type='email' name="email" placeholder='Email'/>
                 </label>
                 <label className='login-fields'>
-                  <span>Password</span>
-                  <input type='password' name="confirmPassword" />
+                  {/* <span>Password</span> */}
+                  <input type='password' name="confirmPassword" placeholder='Password'/>
                 </label>
                 {/* <label className="terms" htmlFor="terms">
                   <input required id="terms" type="checkbox"/>
