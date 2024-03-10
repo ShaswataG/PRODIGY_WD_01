@@ -8,13 +8,13 @@ export default function Navbar(props) {
         <nav id={props.mode ? "navbar-dark" : "navbar-light"} className="navBar">
             <div onClick={() => window.location.href='/'} className="company">
                 <img />
-                <h2>XYZ Booking</h2>
+                <h2>XYZ Bookings</h2>
             </div>
             <div>
                 <ul className="navbar-main">
                     <li><a href="#main" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Home</a></li>
                     <li><a href="#about-us" className={props.mode ? "nav-items-dark" : "nav-items-light"}>About us</a></li>
-                    <li><a href="#popular-packages" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Popular Packages</a></li>
+                    <li><a href="#popular-packages" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Explore</a></li>
                     <li><a href="#contact" className={props.mode ? "nav-items-dark" : "nav-items-light"}>Contact us</a></li>
                 </ul>
             </div>

@@ -10,7 +10,6 @@ export default function Footer(props) {
                 <li><img src={props.mode ? "./images/twitter-x-white.svg" : "./images/twitter-x-black.svg"}/></li>
                 <li><img src={props.mode ? "./images/threads-white.svg" : "./images/threads-black.svg"}/></li>
             </ul>
-            <p>&copy; Shaswata</p>
         </footer>
     )
 }

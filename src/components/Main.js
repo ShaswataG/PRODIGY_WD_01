@@ -16,7 +16,7 @@ export default function Main(props) {
                     <button target="_blank" onClick={() => window.location.href='register'} className={props.mode ? "main--button-dark" : "main--button-light"} >Get Started</button>
                 </section>
                 <section id="popular-packages">
-                    <h1>Popular Packages</h1>
+                    <h1>Explore</h1>
                     <section className="card-collection" >
                         {cards}
                     </section>

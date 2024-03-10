@@ -24,7 +24,7 @@ export default function Register() {
     return (
         <>
             <form className="register-form" onSubmit={handleSubmit}>
-                <h3>Get Started</h3>
+                <h3>Register</h3>
                 <label htmlFor="username"><span>Username</span><input onChange={handleChange} type="text" name="username" id="username" /></label>
                 <label htmlFor="password"><span>Email</span><input onChange={handleChange} type="email" name="email" id="email" /></label>
                 <label htmlFor="password"><span>Password</span><input onChange={handleChange} name="password" id="password" type="password" /></label>
