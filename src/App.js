@@ -1,7 +1,6 @@
 import React from "react";
 import Landing from "./pages/Landing";
 import Register from './pages/Register';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
